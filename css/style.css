@@ -1,0 +1,373 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 17px;
+	color: #ffffff;
+	line-height: 1.6;
+}
+
+/* Notification Panel */
+.notification {
+	position: sticky;
+	padding: 10px 15px;
+	box-sizing: border-box;
+	top: 0;
+	justify-content: center;
+	align-items: center;
+	background: #f0f0f0;
+	width: 100%;
+	min-height: 42px;
+	transition: all ease 0.375s;
+}
+
+.notification .content-notif {
+	max-width: 720px;
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	gap: 1rem;
+}
+
+.notification .content-notif span {
+	color: #0408f5;
+}
+
+.notification .content-notif p {
+	box-sizing: border-box;
+	font-size: 0.8em;
+	color: #000000;
+	flex: 1;
+}
+
+.notification .content-notif button {
+	/* position: relative; */
+	background: #007bc1;
+	color: #ffffff;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	height: 35px;
+	padding: 0;
+	min-width: 90px;
+	font-size: 0.8em;
+	box-sizing: border-box;
+	font-weight: 300;
+	cursor: pointer;
+	margin-top: 0.2em;
+	flex: 0 0 80px;
+}
+
+.notification .content-notif button:hover {
+	background-color: #0060a1;
+	color: #000000;
+}
+
+.notification .content-notif button:active {
+	background-color: #0060a1;
+	box-shadow: 0 5px rgb(0, 215, 253);
+	transform: translateY(4px);
+}
+/* Notification Panel */
+
+/* Page Header */
+#showcase {
+	background-image: url('../assets/work-desk__dustin-lee.jpg');
+	background-color: #004a75;
+	background-blend-mode: soft-light;
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	display: flex;
+	width: auto;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 0 20px;
+	position: relative;
+}
+
+.logo {
+	position: absolute;
+	top: 2em;
+	left: 2em;
+	width: 60px;
+	height: 60px;
+}
+
+#showcase h1 {
+	font-size: 30px;
+	line-height: 1.2;
+}
+
+#showcase h2 {
+	font-size: 40px;
+	line-height: 1.2;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#showcase p {
+	font-size: 20px;
+	margin-top: 5px;
+}
+
+#showcase .button {
+	font-size: 18px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #ffffff;
+	border: #ffffff 1px solid;
+	padding: 10px 20px;
+	border-radius: 5px;
+	margin-top: 20px;
+}
+
+#showcase .button:hover {
+	background: #ffffff;
+	color: #004a75;
+}
+/* Page Header */
+
+/* Highlight Panel */
+.highlight_panel {
+	background-color: #e5e5e5;
+	box-sizing: border-box;
+	color: #000000;
+}
+
+.panel_header {
+	background-color: #e5e5e5;
+	color: #000000;
+	padding: 20px;
+	text-align: center;
+}
+
+/* Container for flexboxes */
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 3em;
+}
+
+/* Create four equal columns */
+.column {
+	flex: 25%;
+	padding: 20px;
+	background-color: #e5e5e5;
+	border-style: groove;
+	border-color: #e5e5e5;
+	border-width: 2px;
+}
+
+.row > .column {
+	width: 100px;
+	margin: 10px;
+	text-align: left;
+	line-height: 75px;
+	font-size: 30px;
+}
+
+.column > .tiles {
+	overflow: auto;
+}
+
+.column > p {
+	font-size: 14px;
+	line-height: 1.2;
+}
+
+i {
+	float: right;
+	padding-top: 1.3em;
+}
+
+/* Newsletter Panel */
+.newsletter {
+	background-color: #007bc1;
+	box-sizing: border-box;
+	color: #ffffff;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	padding: 30px;
+	max-width: 640px;
+}
+
+.newsletter h3 {
+	margin-bottom: 10px;
+}
+
+.newsletter p {
+	margin-bottom: 10px;
+}
+
+.newsletter .form input {
+	width: 70%;
+	border: 0;
+	height: 20px;
+}
+
+.newsletter .form button {
+	background-color: #ff8000;
+	color: #ffffff;
+	border: 0;
+	border-radius: 5px;
+	width: 25%;
+	padding-left: 20px;
+	padding-right: 20px;
+	height: 22px;
+}
+
+.newsletter .btn-close {
+	position: absolute;
+	top: -15px;
+	right: 10px;
+	color: #ffffff;
+}
+
+.btn-close:hover {
+	color: #f44336;
+	cursor: pointer;
+}
+
+.btn-close:active {
+	box-shadow: 0 5px rgb(253, 164, 0);
+	transform: translateY(4px);
+	background: none;
+}
+
+/* Animation */
+.newsletter.fade-in-bottom {
+	animation: fade-in-bottom 1s ease-in-out both;
+}
+
+@keyframes fade-in-bottom {
+	0% {
+		transform: translateY(50px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+/* Newsletter Panel  */
+
+/* Footer */
+.footer {
+	padding: 20px;
+	text-align: center;
+	background-color: #004a75;
+	color: #ffffff;
+}
+/* Footer */
+
+/* On screens that are 960px wide or less, go from three columns to two columns */
+@media screen and (max-width: 960px) {
+	.showcase {
+		height: auto;
+		width: auto;
+		text-align: center;
+	}
+
+	#showcase img {
+		display: none;
+	}
+
+	.column {
+		flex: 40%;
+	}
+
+	.newsletter {
+		width: 100%;
+	}
+
+	.newsletter {
+		text-align: justify;
+	}
+
+	.newsletter .form {
+		float: none;
+		text-align: center;
+		width: 100%;
+	}
+
+	.newsletter .form input[type='email'] {
+		width: 100%;
+		margin-bottom: 10px;
+		display: block;
+	}
+
+	.newsletter .form button {
+		width: 100%;
+		display: block;
+	}
+}
+
+/* On screens that are 480px wide or less, go from two columns to one columns */
+@media screen and (max-width: 480px) {
+	.column {
+		flex: 100%;
+	}
+
+	.showcase {
+		height: auto;
+		width: auto;
+		text-align: center;
+	}
+
+	#showcase img {
+		display: none;
+	}
+
+	.notification .content-notif {
+		display: inline-block;
+	}
+
+	.notification .content-notif p {
+		margin-bottom: 1rem;
+	}
+
+	.newsletter {
+		width: 100%;
+	}
+
+	.newsletter {
+		text-align: justify;
+	}
+
+	.newsletter .form {
+		float: none;
+		text-align: center;
+		width: 100%;
+	}
+
+	.newsletter .form input[type='email'] {
+		width: 100%;
+		margin-bottom: 10px;
+		display: block;
+	}
+
+	.newsletter .form button {
+		width: 100%;
+		display: block;
+	}
+}
+/* Highlight Panel */
+
+/* Clicked */
+.notification-click {
+	display: none;
+}
